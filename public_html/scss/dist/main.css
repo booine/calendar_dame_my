@@ -1,0 +1,261 @@
+body {
+  box-sizing: border-box;
+}
+
+button {
+  border: 0;
+  background: #fff;
+  color: #7e7e7e;
+}
+
+i {
+  display: inline-block;
+}
+
+.box {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  height: 100vh;
+}
+.box #header {
+  padding: 20px 30px;
+  margin-bottom: -1px;
+  border: 1px solid #ccc;
+}
+.box #calendar {
+  height: 90%;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#toggleMonth {
+  float: left;
+}
+#toggleMonth .today,
+#toggleMonth i {
+  transition: background-color 0.2s;
+}
+#toggleMonth .today:hover,
+#toggleMonth i:hover {
+  background: #eee;
+}
+#toggleMonth .today {
+  margin-right: 25px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+}
+#toggleMonth .changeMonth {
+  display: inline-block;
+}
+#toggleMonth .changeMonth i {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#toggleMonth .changeMonth i.icon-angle-left {
+  margin-right: 20px;
+}
+
+#date {
+  width: 70%;
+  float: right;
+  padding: 4px 0;
+  display: flex;
+  flex: 1 0;
+  justify-content: space-between;
+  margin-left: -1px;
+  align-items: center;
+}
+
+#weeks,
+#dates {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#weeks {
+  height: 5%;
+  text-transform: uppercase;
+}
+
+#dates {
+  height: 95%;
+  align-items: stretch;
+}
+
+.week,
+.day-block {
+  width: calc(100%/7);
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.week {
+  padding: 5px;
+  text-align: center;
+}
+.week.red {
+  color: red;
+}
+
+.day-block {
+  height: 20%;
+  padding: 4px;
+  overflow: auto;
+  transition: background-color 0.2s;
+}
+.day-block > .day {
+  text-align: center;
+}
+.day-block:hover {
+  background-color: #dedede;
+}
+.day-block.selected {
+  background-color: #dedede;
+}
+.day-block.focus {
+  background: #ffc10773;
+}
+.day-block:nth-child(1), .day-block:nth-child(7), .day-block:nth-child(8), .day-block:nth-child(14), .day-block:nth-child(15), .day-block:nth-child(21), .day-block:nth-child(22), .day-block:nth-child(28), .day-block:nth-child(29) {
+  color: red;
+}
+.day-block.empty {
+  background: #eee;
+}
+.day-block.empty .event {
+  cursor: unset;
+}
+.day-block .event {
+  display: flex;
+  justify-content: space-between;
+  background: #80c3e0;
+  margin-bottom: 4px;
+  padding: 0px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+}
+.day-block .event.selected {
+  background: #ffc107;
+}
+
+#todoMode {
+  display: none;
+  min-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 auto;
+  position: fixed;
+  background: white;
+  text-transform: capitalize;
+}
+#todoMode.open {
+  display: block;
+}
+#todoMode.new .buttons > .update,
+#todoMode.new .buttons > .delete {
+  display: none;
+}
+#todoMode.old .buttons > .create {
+  display: none;
+}
+#todoMode > div {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+#todoMode label {
+  display: block;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+#todoMode input {
+  padding-left: 10px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.4s;
+}
+#todoMode input:hover {
+  border-bottom: 1px solid green;
+}
+#todoMode textarea {
+  padding: 5px 10px;
+}
+#todoMode .todoEdit {
+  display: flex;
+}
+#todoMode .todoEdit input {
+  flex: 1 0;
+}
+#todoMode .todoEdit button {
+  margin-left: 10px;
+}
+#todoMode .error-msg {
+  display: none;
+  padding: 0;
+}
+#todoMode .error-msg.open {
+  display: block;
+}
+#todoMode .error-msg .alert {
+  border-radius: 0;
+}
+#todoMode .theDay {
+  text-align: center;
+}
+#todoMode #description {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  transition: border 0.4s;
+}
+#todoMode #description:hover {
+  border: 1px solid green;
+}
+#todoMode .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+#todoMode .buttons .delete,
+#todoMode .buttons .update,
+#todoMode .buttons .cancel,
+#todoMode .buttons .create {
+  flex: 1 0;
+  padding: 5px 10px;
+  border: 1px solid #f0eeee;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: background-color 0.2s, color 0.2s;
+}
+#todoMode .buttons .delete:hover,
+#todoMode .buttons .update:hover,
+#todoMode .buttons .cancel:hover,
+#todoMode .buttons .create:hover {
+  background-color: #3f42dd;
+  color: white;
+}
+#todoMode .buttons .create {
+  transition: background-color 0.2s, color 0.2s;
+}
+#todoMode .buttons .create:hover {
+  background-color: #53a311;
+  color: white;
+}
+#todoMode .buttons .cancel {
+  transition: background-color 0.2s, color 0.2s;
+}
+#todoMode .buttons .cancel:hover {
+  background-color: #626a6d;
+  color: white;
+}
+#todoMode .buttons .delete {
+  transition: background-color 0.2s, color 0.2s;
+}
+#todoMode .buttons .delete:hover {
+  background-color: #a73021;
+  color: white;
+}
