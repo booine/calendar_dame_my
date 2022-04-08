@@ -162,7 +162,8 @@ i {
     &:nth-child(21),
     &:nth-child(22),
     &:nth-child(28),
-    &:nth-child(29) {
+    &:nth-child(29),
+    &:nth-child(35) {
         color: red;
     }
 
@@ -346,4 +347,19 @@ i {
         }
     }
 
+}
+
+// 當視窗畫面放大到 1440px 以上時，calendar畫面最大寬度不能大於 viewport的 80%寬。
+@media (min-width:1400px) {
+    .box {
+        max-width: 80%;
+    }
+}
+
+// 當視窗畫面縮到 1280px 以下時，calendar畫面寬不能小於 960px。
+@media (max-width:1280px) {
+    .box {
+        min-width: 960px;
+
+    }
 }
