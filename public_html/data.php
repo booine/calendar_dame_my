@@ -68,7 +68,7 @@ catch (PDOException $e)
 // $month = $_POST['month']; //用傳入的 month 就會出錯...
 
 date_default_timezone_set("Asia/Taipei"); //PHP 時區 timezone 設定，一開始是未設置所以會以標準時區 ：也就是GMT+0 (Taiwan is GMT-8)
-$weeks = ['mon', 'tue', 'wed', 'thu', 'fri'];
+$weeks = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 // 月曆上的日期：
 // 這個月有幾天？28/29/30/31 (cal_days_in_month — 返回某個曆法中某年中某月的天數)
 $days = cal_days_in_month(CAL_GREGORIAN, $month, $year);

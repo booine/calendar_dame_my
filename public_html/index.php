@@ -26,11 +26,9 @@
 
     <div id="calendar">
         <div id="weeks">
-            <div class="week red">sun</div>
             <?php foreach ($weeks as $key => $week): ?>
                 <div class="week"> <?=$week ?> </div>
             <?php endforeach ?>
-            <div class="week red">sat</div>
         </div>
         <div id="dates">
             <?php foreach ($dates as $key => $day): ?>

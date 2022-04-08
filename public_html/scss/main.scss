@@ -119,15 +119,17 @@ i {
     width: calc(100%/7);
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
+
+    //「n」從0開始遞增數字 0,1,2,3,4,...代入。不論偶數列或奇數列都會有 1。
+    &:nth-child(7n),
+    &:nth-child(7n+1) {
+        color: red;
+    }
 }
 
 .week {
     padding: 5px;
     text-align: center;
-
-    &.red {
-        color: red;
-    }
 }
 
 .day-block {
@@ -152,19 +154,6 @@ i {
     &.focus {
         background: #ffc10773;
 
-    }
-
-    &:nth-child(1),
-    &:nth-child(7),
-    &:nth-child(8),
-    &:nth-child(14),
-    &:nth-child(15),
-    &:nth-child(21),
-    &:nth-child(22),
-    &:nth-child(28),
-    &:nth-child(29),
-    &:nth-child(35) {
-        color: red;
     }
 
     &.empty {

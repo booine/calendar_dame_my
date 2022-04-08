@@ -94,13 +94,15 @@ i {
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
 }
+.week:nth-child(7n), .week:nth-child(7n+1),
+.day-block:nth-child(7n),
+.day-block:nth-child(7n+1) {
+  color: red;
+}
 
 .week {
   padding: 5px;
   text-align: center;
-}
-.week.red {
-  color: red;
 }
 
 .day-block {
@@ -120,9 +122,6 @@ i {
 }
 .day-block.focus {
   background: #ffc10773;
-}
-.day-block:nth-child(1), .day-block:nth-child(7), .day-block:nth-child(8), .day-block:nth-child(14), .day-block:nth-child(15), .day-block:nth-child(21), .day-block:nth-child(22), .day-block:nth-child(28), .day-block:nth-child(29), .day-block:nth-child(35) {
-  color: red;
 }
 .day-block.empty {
   background: #eee;
