@@ -1,5 +1,5 @@
 # 課程「全端」練習：Calendar
-1. 依照課程使用：jQuery / PHP / MySQL
+1. 依照課程使用：html / css / scss / jQuery / PHP / MySQL
 - 初始畫面：
 <img width="1095" alt="螢幕快照 2022-04-08 17 00 22" src="https://user-images.githubusercontent.com/87762811/162403382-14cb51b4-1b23-4924-a0a4-d7eb417b80f8.png">
 
