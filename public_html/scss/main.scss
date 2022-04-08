@@ -19,21 +19,6 @@ i {
     margin: 0 auto;
     height: 100vh;
 
-    #header {
-        padding: 20px 30px;
-        margin-bottom: -1px;
-        border: 1px solid #ccc;
-
-
-    }
-
-    #calendar {
-        height: 90%;
-        border-right: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-
-    }
-
 }
 
 // calendar
@@ -80,7 +65,20 @@ i {
 
 }
 
+#header {
+    padding: 20px 30px;
+    margin-bottom: -1px;
+    border: 1px solid #ccc;
 
+
+}
+
+#calendar {
+    // height: 90%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
 
 
 #date {
@@ -103,7 +101,6 @@ i {
 }
 
 #weeks {
-    height: 5%;
     text-transform: uppercase;
 }
 
@@ -133,7 +130,7 @@ i {
 }
 
 .day-block {
-    height: 20%;
+    height: 15vh;
     padding: 4px;
 
     overflow: auto;

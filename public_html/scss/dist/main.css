@@ -18,16 +18,6 @@ i {
   margin: 0 auto;
   height: 100vh;
 }
-.box #header {
-  padding: 20px 30px;
-  margin-bottom: -1px;
-  border: 1px solid #ccc;
-}
-.box #calendar {
-  height: 90%;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
 
 #toggleMonth {
   float: left;
@@ -61,6 +51,17 @@ i {
   margin-right: 20px;
 }
 
+#header {
+  padding: 20px 30px;
+  margin-bottom: -1px;
+  border: 1px solid #ccc;
+}
+
+#calendar {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
 #date {
   width: 70%;
   float: right;
@@ -79,7 +80,6 @@ i {
 }
 
 #weeks {
-  height: 5%;
   text-transform: uppercase;
 }
 
@@ -106,7 +106,7 @@ i {
 }
 
 .day-block {
-  height: 20%;
+  height: 15vh;
   padding: 4px;
   overflow: auto;
   transition: background-color 0.2s;
